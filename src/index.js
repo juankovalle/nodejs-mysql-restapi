@@ -1,14 +1,6 @@
-import express from 'express'
-import employeesRoutes from './routes/employees.routes.js' 
-import indexRoutes from './routes/index.routes.js'
+import app from './app.js'
+import {PORT} from './config.js'
 
-const app = express()
+app.listen(PORT)
 
-app.use(express.json())
-
-app.use(employeesRoutes)
-app.use(indexRoutes)
-
-app.listen(3000)
-
-console.log('Server corriendo')
+console.log('Server corriendo:' + PORT)
